@@ -1,45 +1,140 @@
-# PRC Icon Library
+# PRC Icon Library (Font Awesome)
 
-Font Awesome Pro SVG sprite assets for the [PRC Platform](https://github.com/pewresearch/prc-platform). This WordPress plugin defines path/URL constants and ships the built sprite files consumed by `prc-platform-core`'s Icon Loader (`PRC\Platform\Icons`).
+Open-source reference plugin that wires Font Awesome **sprite-based** icons into the PRC Platform. It defines `PRC_PLATFORM_ICONS_URL` / `PRC_PLATFORM_ICONS_PATH` and ships a build script to populate `build/icons/sprites/`.
 
-## Repository status
+**Public repo note:** The sibling repository at [pewresearch/prc-icon-library](https://github.com/pewresearch/prc-icon-library) includes **only `brands.svg`** (Font Awesome Free Brands). All other sprite files are stripped at release time because they require a [Font Awesome Pro](https://fontawesome.com/) license. Clone this monorepo plugin or run `bash bin/build.sh` locally with your own FA Pro kit to obtain the full sprite set.
 
-This repository is the **standalone consumer mirror** for `prc-icon-library`. Plugin source is developed in the [prc-platform](https://github.com/pewresearch/prc-platform) monorepo under `plugins/prc-icon-library/`.
+## Status / future direction
 
-Starting with **platform release 1.7**, changed releases of this plugin are pushed here automatically from [.github/workflows/build-release.yml](https://github.com/pewresearch/prc-platform/blob/trunk/.github/workflows/build-release.yml) when the plugin is listed in [.github/release-plugins.json](https://github.com/pewresearch/prc-platform/blob/trunk/.github/release-plugins.json).
+PRC intends to **transition away from vendored SVG sprites** toward **WordPress core's SVG Icon API** as it stabilizes:
 
-Until the first 1.7 ship, this repo contains documentation only. The plugin tree will appear on the first release that includes `prc-icon-library` in the ship matrix.
+- `WP_Icons_Registry` — core icon registry (shipped in WP 7.0)
+- `register_icon_collection()` / `register_icon()` — custom icon registration ([gutenberg#77260](https://github.com/WordPress/gutenberg/pull/77260))
+- Reusable `IconPickerModal` in the block editor ([gutenberg#76787](https://github.com/WordPress/gutenberg/pull/76787))
+
+Track overall progress on [WordPress/gutenberg#75715](https://github.com/WordPress/gutenberg/issues/75715) (*SVG Icon API: Iteration for WordPress 7.1*). Once collection registration and inline RichText icon insertion land in core, this plugin will register PRC glyphs as a core icon collection instead of maintaining a parallel sprite loader in `prc-scripts`.
+
+Until that migration, the sprite-reference pattern documented here remains the supported approach for `prc-block-bits/icon-span`, shareable-text brand icons, and `\PRC\Platform\Icons\render()`.
 
 ## What it does
 
-- Builds Font Awesome Pro SVG sprites (solid, regular, light, thin, duotone, brands, sharp variants, and PRC custom icons) into `build/icons/sprites/`
-- Defines `PRC_PLATFORM_ICONS_URL` and `PRC_PLATFORM_ICONS_PATH` at plugin load for the Icon Loader in `prc-platform-core`
-- Registers no hooks; rendering lives in `prc-platform-core/includes/icon-loader/`
+- Defines `PRC_PLATFORM_ICONS_URL` and `PRC_PLATFORM_ICONS_PATH` at plugin load time so `prc-scripts` icon helpers can resolve sprite URLs
+- Provides `bin/build.sh` to copy sprites from a licensed `@awesome.me` kit into `build/icons/sprites/` (not run in CI for the public repo)
+- On the PRC Platform (private monorepo), all Font Awesome Pro style sprites are vendored under `build/icons/sprites/` for build-time efficiency
 
-## Development
+## Key files
 
-Work happens in the monorepo, not in this repository directly.
+| File | Purpose |
+| --- | --- |
+| `prc-icon-library.php` | Plugin entry point; defines `PRC_PLATFORM_ICONS_URL` and `PRC_PLATFORM_ICONS_PATH` constants |
+| `bin/build.sh` | Build script; copies sprites from `node_modules/@awesome.me/kit-*/icons/sprites/` into `build/icons/sprites/` |
+| `build/icons/sprites/*.svg` | Compiled SVG sprite files (one per library); **only `brands.svg` in the public repo** |
+| `package.json` | npm workspace config; lists Font Awesome Pro packages and the custom kit as optional dependencies |
 
-```bash
-git clone https://github.com/pewresearch/prc-platform.git
-cd prc-platform
-npm run bootstrap
-npx turbo build --filter=@prc/icon-library
+## Constants defined
+
+| Constant | Value |
+| --- | --- |
+| `PRC_PLATFORM_ICONS_URL` | `{plugin_dir_url}/build/icons/sprites/` (trailing slash) |
+| `PRC_PLATFORM_ICONS_PATH` | `{plugin_dir_path}/build/icons/sprites/` (trailing slash) |
+
+Both constants are consumed by `\PRC\Platform\Icons\get_icon_as_url()` and related helpers in `prc-scripts`. If the plugin is inactive or sprites are missing, those functions return HTML comments rather than throwing.
+
+## Sprite libraries
+
+| Sprite file | Library name | In public repo |
+| --- | --- | --- |
+| `brands.svg` | `brands` | Yes (FA Free Brands, SIL OFL 1.1 / CC BY 4.0) |
+| `solid.svg` | `solid` | No — build locally with FA Pro |
+| `regular.svg` | `regular` | No |
+| `light.svg` | `light` | No |
+| `thin.svg` | `thin` | No |
+| `duotone.svg` | `duotone` | No |
+| `sharp-solid.svg` | `sharp-solid` | No |
+| `sharp-regular.svg` | `sharp-regular` | No |
+| `sharp-light.svg` | `sharp-light` | No |
+| `sharp-thin.svg` | `sharp-thin` | No |
+| `sharp-duotone-solid.svg` | `sharp-duotone-solid` | No |
+| `custom-icons.svg` | `custom-icons` | No (internal PRC kit sprite; not redistributed) |
+
+## Filters / hooks
+
+This plugin registers no hooks or filters beyond a `robots_txt` disallow for `/wp-content/plugins/prc-icon-library/` on public sites. All rendering logic lives in `prc-scripts`.
+
+## Usage
+
+Icon rendering is handled by functions in the `PRC\Platform\Icons` namespace (defined in `prc-scripts/includes/utils.php`).
+
+**Render an icon as inline HTML (cached, `<i>` wrapper):**
+
+```php
+echo \PRC\Platform\Icons\render( 'solid', 'arrow-right', 1.25 );
 ```
 
-Sprite rebuild (requires `PRC_PLATFORM_FONTAWESOME_TOKEN` — see [docs/DEPENDENCY_AUTH.md](https://github.com/pewresearch/prc-platform/blob/trunk/docs/DEPENDENCY_AUTH.md) in the monorepo):
+**Get an icon as an SVG fragment (cached, useful for server-side templating):**
+
+```php
+$svg = \PRC\Platform\Icons\get_icon_as_svg( 'regular', 'magnifying-glass', '#333' );
+```
+
+**Get an icon as a data URI (useful for CSS `background-image`):**
+
+```php
+$uri = \PRC\Platform\Icons\get_icon_as_data_uri( 'light', 'circle-check' );
+```
+
+**Get a raw sprite fragment URL (used by `prc-block-bits/icon-span`):**
+
+```php
+$url = \PRC\Platform\Icons\get_icon_as_url( 'solid', 'arrow-right' );
+// https://.../build/icons/sprites/solid.svg#arrow-right
+```
+
+Icons are object-cached for 7 days (`prc_icons__rendered` / `prc_icons__svg` groups). Cache keys include `PRC_PLATFORM_VERSION`, so a version bump invalidates cached markup automatically.
+
+## Build
+
+Sprite files are **not** produced by `npm run build` in CI for the public repository. Populate them locally:
 
 ```bash
-npm run build:sprites -w @prc/icon-library
+# From monorepo root (requires PRC_PLATFORM_FONTAWESOME_TOKEN)
+npm install
+bash plugins/prc-icon-library/bin/build.sh
+
+# Or from the plugin directory
+cd plugins/prc-icon-library && bash ./bin/build.sh
+```
+
+The script expects `node_modules/@awesome.me/kit-329ff3ff3e` (or another `kit-*` folder) after `npm install`. If install fails with 404 errors for `@fortawesome/*` packages, set `PRC_PLATFORM_FONTAWESOME_TOKEN` and regenerate `.npmrc` via `bash bin/setup/generate-npmrc.sh` from the repo root.
+
+After building, regenerate the editor icon index used by `@prc/icons` / `IconPicker`:
+
+```bash
+node plugins/prc-scripts/includes/scripts/src/@prc/icons/bin/build-index.js
+npx turbo build --filter=@prc/icons
 ```
 
 ## Dependencies
 
-| Dependency | Notes |
+| Dependency | Type | Notes |
+| --- | --- | --- |
+| `prc-scripts` | WordPress plugin | Required; provides `\PRC\Platform\Icons\*` render helpers |
+| `@awesome.me/kit-329ff3ff3e` | npm (private) | Custom Font Awesome kit; requires `PRC_PLATFORM_FONTAWESOME_TOKEN` |
+| `@fortawesome/fontawesome-pro` | npm (private) | Font Awesome Pro; requires `PRC_PLATFORM_FONTAWESOME_TOKEN` |
+| `@fortawesome/free-brands-svg-icons` | npm (public) | Source for `brands.svg` |
+
+## Licensing
+
+| Asset | License |
 | --- | --- |
-| `prc-platform-core` | Required; provides `Icon_Loader` and `PRC\Platform\Icons\*` render helpers |
-| Font Awesome Pro (npm) | Licensed packages; token required for install/build in the monorepo |
+| Plugin PHP, `bin/build.sh`, `package.json` | GPL-2.0-or-later ([LICENSE](LICENSE)) |
+| `brands.svg` | Font Awesome Free Brands — [SIL OFL 1.1](https://scripts.sil.org/OFL) / [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| All other sprites (`solid`, `regular`, Pro styles, `custom-icons`) | **Not redistributed** in the public repo. Build locally under your [Font Awesome Pro](https://fontawesome.com/license) license. |
 
-## License
+Font Awesome is a trademark of Fonticons, Inc.
 
-GPL-2.0-or-later (same as PRC Platform plugins).
+## Notes
+
+- Sprite-based icons use `<use href="…">` references. Sprites must be served from the **same origin** as the page or browsers silently fail to render.
+- The `@awesome.me` kit used internally includes PRC custom glyphs in `custom-icons.svg`. Add icons through the Font Awesome kit dashboard, then rebuild.
+- The plugin defines constants unconditionally at load time; loading it twice will trigger a PHP notice. Keep it in the standard plugins directory only.
