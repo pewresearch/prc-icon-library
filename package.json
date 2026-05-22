@@ -1,0 +1,27 @@
+{
+	"name": "@prc/icon-library",
+	"description": "Fontawesome based icon library for PRC Design System",
+	"license": "GPL-2.0-or-later",
+	"devDependencies": {
+		"@wordpress/scripts": "^31.4.0",
+		"babel-plugin-macros": "^3.1.0"
+	},
+	"scripts": {
+		"build:sprites": "bash ./bin/build.sh"
+	},
+	"optionalDependencies": {
+		"@awesome.me/kit-329ff3ff3e": "^1.0.79",
+		"@fortawesome/react-fontawesome": "^0.2.2",
+		"@fortawesome/fontawesome-pro": "^6.7.2",
+		"@fortawesome/fontawesome-svg-core": "^6.7.2",
+		"@fortawesome/free-brands-svg-icons": "^6.7.2",
+		"@fortawesome/pro-light-svg-icons": "^6.7.2",
+		"@fortawesome/pro-regular-svg-icons": "^6.7.2",
+		"@fortawesome/pro-solid-svg-icons": "^6.7.2",
+		"@fortawesome/pro-thin-svg-icons": "^6.7.2",
+		"@fortawesome/sharp-light-svg-icons": "^6.7.2",
+		"@fortawesome/sharp-regular-svg-icons": "^6.7.2",
+		"@fortawesome/sharp-solid-svg-icons": "^6.7.2"
+	},
+	"version": "1.0.0"
+}
