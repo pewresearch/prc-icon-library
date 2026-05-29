@@ -59,7 +59,7 @@ Both constants are consumed by `\PRC\Platform\Icons\get_icon_as_url()` and relat
 
 ## Filters / hooks
 
-This plugin registers no hooks or filters beyond a `robots_txt` disallow for `/wp-content/plugins/prc-icon-library/` on public sites. All rendering logic lives in `prc-scripts`.
+This plugin registers no hooks or filters beyond a `robots_txt` disallow for `/wp-content/plugins/prc-icon-library/` on public sites (both the catch-all `User-agent: *` group and the dedicated `User-agent: Googlebot` group, since Googlebot does not inherit rules from `*`). All rendering logic lives in `prc-scripts`.
 
 ## Usage
 

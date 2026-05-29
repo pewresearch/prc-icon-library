@@ -36,6 +36,42 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'PRC_PLATFORM_ICONS_URL', plugin_dir_url( __FILE__ ) . 'build/icons/sprites/' );
 define( 'PRC_PLATFORM_ICONS_PATH', plugin_dir_path( __FILE__ ) . '/build/icons/sprites/' );
 
+/**
+ * Disallow path for icon sprite assets in robots.txt.
+ */
+const PRC_ICON_LIBRARY_ROBOTS_DISALLOW = 'Disallow: /wp-content/plugins/prc-icon-library/';
+
+/**
+ * Inject icon-library disallow into the Googlebot group when present.
+ *
+ * Googlebot does not inherit rules from User-agent: * when a dedicated
+ * Googlebot block exists (see prc-elasticpress).
+ *
+ * @param string $output The robots.txt output.
+ * @return string
+ */
+function prc_icon_library_robots_txt_for_googlebot( string $output ): string {
+	if ( preg_match(
+		'/^User-agent:\s*Googlebot\s*\r?\n(?:[^\r\n]+\r?\n)*?' . preg_quote( PRC_ICON_LIBRARY_ROBOTS_DISALLOW, '/' ) . '/mi',
+		$output
+	) ) {
+		return $output;
+	}
+
+	if ( preg_match( '/^User-agent:\s*Googlebot\s*(?:\r?\n|$)/mi', $output ) ) {
+		$updated = preg_replace(
+			'/^(User-agent:\s*Googlebot)\s*(?:\r?\n|$)/mi',
+			'$1' . "\n" . PRC_ICON_LIBRARY_ROBOTS_DISALLOW . "\n",
+			$output,
+			1
+		);
+
+		return is_string( $updated ) ? $updated : $output;
+	}
+
+	return $output;
+}
+
 add_filter(
 	'robots_txt',
 	static function ( $output, $public ) {
@@ -43,8 +79,21 @@ add_filter(
 			return $output;
 		}
 
-		return $output . "\nDisallow: /wp-content/plugins/prc-icon-library/\n";
+		return $output . "\n" . PRC_ICON_LIBRARY_ROBOTS_DISALLOW . "\n";
 	},
 	10,
+	2
+);
+
+add_filter(
+	'robots_txt',
+	static function ( $output, $public ) {
+		if ( ! $public ) {
+			return $output;
+		}
+
+		return prc_icon_library_robots_txt_for_googlebot( $output );
+	},
+	11,
 	2
 );
