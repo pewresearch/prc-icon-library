@@ -1,5 +1,7 @@
 # PRC Icon Library (Font Awesome)
 
+> Canonical docs: [docs/plugins/prc-icon-library/](../../docs/plugins/prc-icon-library/)
+
 Open-source reference plugin that wires Font Awesome **sprite-based** icons into the PRC Platform. It defines `PRC_PLATFORM_ICONS_URL` / `PRC_PLATFORM_ICONS_PATH` and ships a build script to populate `build/icons/sprites/`.
 
 **Public repo note:** The sibling repository at [pewresearch/prc-icon-library](https://github.com/pewresearch/prc-icon-library) includes **only `brands.svg`** (Font Awesome Free Brands). All other sprite files are stripped at release time because they require a [Font Awesome Pro](https://fontawesome.com/) license. Clone this monorepo plugin or run `bash bin/build.sh` locally with your own FA Pro kit to obtain the full sprite set.
