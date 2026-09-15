@@ -1,6 +1,4 @@
 <?php
-declare(strict_types=1);
-
 /**
  * PRC Icon Library (Font Awesome)
  *
@@ -24,17 +22,38 @@ declare(strict_types=1);
  * Requires Plugins:  prc-scripts
  */
 
+declare(strict_types=1);
+
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
 /**
- * The icon library url. Ends with trailing slash. Simply append the library name to the end of the url.
- * Get specific icon by icon name: {library}.svg#{icon_name}.
+ * Fill-sprite base URL. Ends with a trailing slash. Append `{collection}.svg#{icon_name}`
+ * (`prc` or `brands`).
  */
-define( 'PRC_PLATFORM_ICONS_URL', plugin_dir_url( __FILE__ ) . 'build/icons/sprites/' );
-define( 'PRC_PLATFORM_ICONS_PATH', plugin_dir_path( __FILE__ ) . '/build/icons/sprites/' );
+define( 'PRC_PLATFORM_ICONS_URL', plugin_dir_url( __FILE__ ) . 'build/icons/' );
+define( 'PRC_PLATFORM_ICONS_PATH', plugin_dir_path( __FILE__ ) . '/build/icons/' );
+define( 'PRC_ICON_LIBRARY_DIR', plugin_dir_path( __FILE__ ) );
+define( 'PRC_ICON_LIBRARY_FILE', __FILE__ );
+
+require_once PRC_ICON_LIBRARY_DIR . 'includes/class-icon-registry.php';
+\PRC\Platform\Icon_Library\Icon_Registry::init();
+
+require_once PRC_ICON_LIBRARY_DIR . 'includes/class-brand-icon-registry.php';
+\PRC\Platform\Icon_Library\Brand_Icon_Registry::init();
+
+require_once PRC_ICON_LIBRARY_DIR . 'includes/class-icon-allowlist.php';
+require_once PRC_ICON_LIBRARY_DIR . 'includes/class-icon-audit.php';
+require_once PRC_ICON_LIBRARY_DIR . 'includes/class-icon-picker-constraint.php';
+require_once PRC_ICON_LIBRARY_DIR . 'includes/class-icon-dropped-migrate.php';
+\PRC\Platform\Icon_Library\Icon_Picker_Constraint::init();
+
+if ( defined( 'WP_CLI' ) && WP_CLI ) {
+	require_once PRC_ICON_LIBRARY_DIR . 'includes/class-icon-audit-cli.php';
+	require_once PRC_ICON_LIBRARY_DIR . 'includes/class-icon-migrate-dropped-cli.php';
+}
 
 /**
  * Disallow path for icon sprite assets in robots.txt.

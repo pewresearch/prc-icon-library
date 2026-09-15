@@ -1,0 +1,238 @@
+{
+	"$comment": "Hardcoded icon name remaps for first-party JS/PHP call sites. Pro names map onto curated FA Free fills or @wordpress/icons chrome. Seth override: keep-sprite is empty. Re-run: npm run icons:scan-call-sites -w @prc/icon-library",
+	"remaps": {
+		"globe-pointer": {
+			"to": "earth-americas",
+			"library": "prc",
+			"reason": "Seth canonical: FA Pro globe-pointer → curated FA Free earth-americas"
+		},
+		"chart-bar": {
+			"to": "chart-column",
+			"library": "prc",
+			"reason": "prc-roper chart placeholder uses the curated column chart"
+		},
+		"column-chart": {
+			"to": "chart-column",
+			"library": "prc",
+			"reason": "Historical custom-icons name already aliased onto chart-column"
+		},
+		"x": {
+			"to": "xmark",
+			"library": "prc",
+			"reason": "FA name x → curated xmark"
+		},
+		"home": {
+			"to": "house",
+			"library": "prc",
+			"reason": "FA alias home → curated house"
+		},
+		"pdf": {
+			"to": "file-pdf",
+			"library": "prc",
+			"reason": "Historical pdf → curated file-pdf"
+		},
+		"building-magnifying-glass": {
+			"to": "magnifying-glass",
+			"library": "prc",
+			"reason": "Pro building-magnifying-glass → curated magnifying-glass"
+		},
+		"face-viewfinder": {
+			"to": "users-viewfinder",
+			"library": "prc",
+			"reason": "Pro face-viewfinder → curated users-viewfinder"
+		},
+		"filter-list": {
+			"to": "filter",
+			"library": "prc",
+			"reason": "Pro filter-list → curated filter"
+		},
+		"filters": {
+			"to": "filter",
+			"library": "prc",
+			"reason": "Pro filters → curated filter"
+		},
+		"lock-hashtag": {
+			"to": "lock",
+			"library": "prc",
+			"reason": "Pro lock-hashtag → curated lock"
+		},
+		"pen-field": {
+			"to": "pen-to-square",
+			"library": "prc",
+			"reason": "Pro pen-field → curated pen-to-square"
+		},
+		"table-pivot": {
+			"to": "table",
+			"library": "prc",
+			"reason": "Pro table-pivot → curated table"
+		},
+		"rectangle-history-circle-plus": {
+			"to": "circle-plus",
+			"library": "prc",
+			"reason": "Pro rectangle-history-circle-plus → curated circle-plus"
+		},
+		"square-dashed-circle-plus": {
+			"to": "circle-plus",
+			"library": "prc",
+			"reason": "Pro square-dashed-circle-plus → curated circle-plus"
+		},
+		"arrow-down-small-big": {
+			"to": "arrow-down-short-wide",
+			"library": "prc",
+			"reason": "Pro arrow-down-small-big → baked FA Free arrow-down-short-wide"
+		},
+		"arrow-up-small-big": {
+			"to": "arrow-up-short-wide",
+			"library": "prc",
+			"reason": "Pro arrow-up-small-big → baked FA Free arrow-up-short-wide"
+		},
+		"cards-blank": {
+			"to": "clone",
+			"library": "prc",
+			"reason": "Pro cards-blank → baked FA Free clone"
+		},
+		"chess-clock": {
+			"to": "stopwatch",
+			"library": "prc",
+			"reason": "Pro chess-clock → baked FA Free stopwatch"
+		},
+		"clock-two": {
+			"to": "clock",
+			"library": "prc",
+			"reason": "Pro clock-two → baked FA Free clock"
+		},
+		"credit-card-front": {
+			"to": "credit-card",
+			"library": "prc",
+			"reason": "Pro credit-card-front → baked FA Free credit-card"
+		},
+		"donut": {
+			"to": "chart-pie",
+			"library": "prc",
+			"reason": "Pro donut → baked FA Free chart-pie"
+		},
+		"input-text": {
+			"to": "i-cursor",
+			"library": "prc",
+			"reason": "Pro input-text → baked FA Free i-cursor"
+		},
+		"list-radio": {
+			"to": "circle-dot",
+			"library": "prc",
+			"reason": "Pro list-radio → baked FA Free circle-dot"
+		},
+		"message-smile": {
+			"to": "comment",
+			"library": "prc",
+			"reason": "Pro message-smile → baked FA Free comment"
+		},
+		"rectangle-history": {
+			"to": "clone",
+			"library": "prc",
+			"reason": "Pro rectangle-history → baked FA Free clone"
+		},
+		"rectangle-vertical-history": {
+			"to": "bars-staggered",
+			"library": "prc",
+			"reason": "Pro rectangle-vertical-history → baked FA Free bars-staggered"
+		},
+		"shield-exclamation": {
+			"to": "shield-halved",
+			"library": "prc",
+			"reason": "Pro shield-exclamation → baked FA Free shield-halved"
+		},
+		"slider": {
+			"to": "sliders",
+			"library": "prc",
+			"reason": "Pro slider → baked FA Free sliders"
+		},
+		"chart-bullet": {
+			"to": "chart-simple",
+			"library": "prc",
+			"reason": "Pro chart-bullet → baked FA Free chart-simple"
+		},
+		"hexagon-image": {
+			"to": "image",
+			"library": "prc",
+			"reason": "Pro hexagon-image → baked FA Free image"
+		},
+		"pen-circle": {
+			"to": "pen",
+			"library": "prc",
+			"reason": "Pro pen-circle → baked FA Free pen"
+		},
+		"family-dress": {
+			"to": "people-group",
+			"library": "prc",
+			"reason": "Pro family-dress → baked FA Free people-group (RLS TOC family-life)"
+		}
+	},
+	"wordpressChrome": {
+		"editor-table": {
+			"wpExport": "table",
+			"file": "plugins/prc-block-tables/src/data-table-render/icon.jsx",
+			"reason": "inserter chrome → @wordpress/icons table"
+		},
+		"list-tree": {
+			"wpExport": "listView",
+			"file": "plugins/prc-report-package/src/report-materials/icon.jsx",
+			"reason": "inserter chrome → @wordpress/icons listView"
+		},
+		"page": {
+			"wpExport": "page",
+			"file": "plugins/prc-block-forms/src/form-page/icon.jsx",
+			"reason": "inserter chrome → @wordpress/icons page"
+		},
+		"sidebar": {
+			"wpExport": "sidebar",
+			"file": "plugins/prc-block-library/src/navigation-panels/icon.jsx",
+			"reason": "inserter chrome → @wordpress/icons sidebar"
+		},
+		"block-question": {
+			"wpExport": "help",
+			"file": "plugins/prc-quiz-builder/src/controller/icon.js",
+			"reason": "inserter chrome → @wordpress/icons help"
+		},
+		"list-dropdown": {
+			"wpExport": "listView",
+			"file": "plugins/prc-block-library/src/form-input-select/icon.jsx",
+			"reason": "inserter chrome → @wordpress/icons listView"
+		},
+		"laptop-mobile": {
+			"wpExport": "mobile",
+			"file": "plugins/prc-block-library/src/responsive-container-controller/icon.jsx",
+			"reason": "inserter chrome → @wordpress/icons mobile"
+		},
+		"face-hand-peeking": {
+			"wpExport": "seen",
+			"file": "plugins/prc-block-library/src/show-more/icon.jsx",
+			"reason": "inserter chrome → @wordpress/icons seen"
+		}
+	},
+	"wordpressRuntime": {
+		"copy": {
+			"wpExport": "copy",
+			"reason": "help-center / sorter / code-syntax copy control"
+		},
+		"arrow-left": {
+			"wpExport": "arrowLeft",
+			"reason": "help-center back control"
+		},
+		"ellipsis-vertical": {
+			"wpExport": "moreVertical",
+			"reason": "sorter row menu"
+		},
+		"eye": {
+			"wpExport": "seen",
+			"reason": "sorter visibility"
+		},
+		"eye-slash": {
+			"wpExport": "unseen",
+			"reason": "sorter visibility"
+		},
+		"trash": {
+			"wpExport": "trash",
+			"reason": "sorter remove row"
+		}
+	}
+}

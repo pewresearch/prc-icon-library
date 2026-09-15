@@ -1,0 +1,732 @@
+{
+	"$comment": "Block-inserter chrome map. Re-run: npm run icons:map-chrome -w @prc/icon-library",
+	"summary": {
+		"files": 125,
+		"uniqueGlyphs": 69,
+		"bySource": {
+			"fa-free-solid": 60,
+			"wordpress-icons": 6,
+			"brands-sprite": 2,
+			"custom": 1
+		}
+	},
+	"glyphs": {
+		"arrow-down-short-wide": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-block-library/src/navigation-panels/icon.jsx"
+			],
+			"faName": "arrow-down-short-wide"
+		},
+		"arrow-down-up-across-line": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-block-library/src/form-input-select-range/icon.jsx"
+			],
+			"faName": "arrow-down-up-across-line"
+		},
+		"arrow-up-a-z": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-block-library/src/taxonomy-index-az-controller/icon.jsx",
+				"plugins/prc-block-library/src/taxonomy-index-az-list/icon.jsx"
+			],
+			"faName": "arrow-up-a-z"
+		},
+		"arrow-up-right-from-square": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-block-library/src/social-share-url-field/icon.jsx"
+			],
+			"faName": "arrow-up-right-from-square"
+		},
+		"arrow-up-short-wide": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-block-library/src/navigation-panels/icon.jsx"
+			],
+			"faName": "arrow-up-short-wide"
+		},
+		"bars-progress": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-block-library/src/progress-bar/icon.jsx",
+				"plugins/prc-quiz-builder/src/progress-bar/icon.js"
+			],
+			"faName": "bars-progress"
+		},
+		"bars-staggered": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-block-library/src/navigation-panel/icon.jsx"
+			],
+			"faName": "bars-staggered"
+		},
+		"bullhorn": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-user-surveys/src/survey-controller/icon.jsx",
+				"plugins/prc-user-surveys/src/survey-variant/icon.jsx"
+			],
+			"faName": "bullhorn"
+		},
+		"calendar-week": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-religious-landscape-study/src/years-pills/icon.jsx"
+			],
+			"faName": "calendar-week"
+		},
+		"card": {
+			"source": "custom",
+			"reason": "curated keep-custom master",
+			"files": ["plugins/prc-block-library/src/card/icon.jsx"]
+		},
+		"caret-down": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-block-tables/src/data-table-filter-select/icon.jsx"
+			],
+			"faName": "caret-down"
+		},
+		"chart-column": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-quiz-builder/src/result-histogram/icon.js"],
+			"faName": "chart-column"
+		},
+		"chart-pie": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-religious-landscape-study/src/donut-regional-chart/icon.jsx"
+			],
+			"faName": "chart-pie"
+		},
+		"chart-simple": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-religious-landscape-study/src/chart-provider/icon.jsx"
+			],
+			"faName": "chart-simple"
+		},
+		"circle-check": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-quiz-builder/src/answer/icon.js"],
+			"faName": "circle-check"
+		},
+		"circle-dot": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-block-library/src/form-input-radio-group/icon.jsx"
+			],
+			"faName": "circle-dot"
+		},
+		"circle-play": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-block-library/src/audio-player/icon.jsx"],
+			"faName": "circle-play"
+		},
+		"circle-plus": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-block-library/deprecated/src/collapsible/icon.jsx",
+				"plugins/prc-block-library/src/carousel-slide/icon.jsx",
+				"plugins/prc-block-library/src/navigation-panel/icon.jsx",
+				"plugins/prc-block-library/src/navigation-panels/icon.jsx"
+			],
+			"faName": "circle-plus"
+		},
+		"circle-question": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-quiz-builder/src/answer/icon.js",
+				"plugins/prc-quiz-builder/src/question/icon.js"
+			],
+			"faName": "circle-question"
+		},
+		"circle-xmark": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-quiz-builder/src/answer/icon.js"],
+			"faName": "circle-xmark"
+		},
+		"clock": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-interactive-features/blocks/src/time-use/icon.jsx"
+			],
+			"faName": "clock"
+		},
+		"comment": {
+			"source": "wordpress-icons",
+			"reason": "exact @wordpress/icons export",
+			"files": ["plugins/prc-block-forms/src/form-message/icon.jsx"],
+			"wpExport": "comment"
+		},
+		"cookie-bite": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-privacy-consent/src/consent-banner/icon.jsx"
+			],
+			"faName": "cookie-bite"
+		},
+		"credit-card": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-block-library/src/flip-card-controller/icon.jsx",
+				"plugins/prc-block-library/src/flip-card-side/icon.jsx"
+			],
+			"faName": "credit-card"
+		},
+		"database": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-block-library/src/roper-db-search/icon.jsx"],
+			"faName": "database"
+		},
+		"diamond-turn-right": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-religious-landscape-study/src/navigation/icon.jsx"
+			],
+			"faName": "diamond-turn-right"
+		},
+		"earth-americas": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-religious-landscape-study/src/available-locations/icon.jsx",
+				"plugins/prc-schema-seo/src/components/icon.jsx"
+			],
+			"faName": "earth-americas"
+		},
+		"file-arrow-down": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-user-accounts/src/user-datasets/icon.jsx"],
+			"faName": "file-arrow-down"
+		},
+		"file-lines": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-quiz-builder/src/page/icon.js",
+				"plugins/prc-quiz-builder/src/pages/icon.js"
+			],
+			"faName": "file-lines"
+		},
+		"filter": {
+			"source": "wordpress-icons",
+			"reason": "exact @wordpress/icons export",
+			"files": [
+				"plugins/prc-elasticpress/src/context-provider/icon.jsx",
+				"plugins/prc-elasticpress/src/results-info/icon.jsx",
+				"plugins/prc-elasticpress/src/template/icon.jsx",
+				"plugins/prc-roper/src/roper-context-provider/icon.jsx"
+			],
+			"wpExport": "filter"
+		},
+		"fingerprint": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-schema-academic-identity/shared/icon.jsx"],
+			"faName": "fingerprint"
+		},
+		"fire": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-block-library/src/popular-story/icon.jsx"],
+			"faName": "fire"
+		},
+		"hat-wizard": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-block-library/src/animation/icon.jsx"],
+			"faName": "hat-wizard"
+		},
+		"i-cursor": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-block-library/src/form-input-text/icon.js",
+				"plugins/prc-block-library/src/form-input-textarea/icon.js"
+			],
+			"faName": "i-cursor"
+		},
+		"icons": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-block-library/src/icon/icon.jsx"],
+			"faName": "icons"
+		},
+		"layer-group": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-roper/src/roper-results/icon.jsx"],
+			"faName": "layer-group"
+		},
+		"list": {
+			"source": "wordpress-icons",
+			"reason": "exact @wordpress/icons export",
+			"files": ["plugins/prc-privacy-consent/src/cookie-list/icon.jsx"],
+			"wpExport": "list"
+		},
+		"lock": {
+			"source": "wordpress-icons",
+			"reason": "exact @wordpress/icons export",
+			"files": [
+				"plugins/prc-user-accounts/src/content-gate/icon.jsx",
+				"plugins/prc-user-accounts/src/private-files/icon.jsx"
+			],
+			"wpExport": "lock"
+		},
+		"magnifying-glass": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-religious-landscape-study/src/state-search/icon.jsx"
+			],
+			"faName": "magnifying-glass"
+		},
+		"mailchimp": {
+			"source": "brands-sprite",
+			"reason": "approved or vendor brand mark",
+			"files": [
+				"plugins/prc-block-library/deprecated/src/mailchimp-form/icon.jsx",
+				"plugins/prc-block-library/deprecated/src/mailchimp-select/icon.jsx"
+			]
+		},
+		"map": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-religious-landscape-study/src/interactive-map/icon.jsx"
+			],
+			"faName": "map"
+		},
+		"newspaper": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-block-library/src/story-item/icon.jsx"],
+			"faName": "newspaper"
+		},
+		"palette": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-block-library/src/color-palette/icon.jsx"],
+			"faName": "palette"
+		},
+		"passport": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-user-accounts/src/profile/icon.jsx"],
+			"faName": "passport"
+		},
+		"pen": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-block-library/src/navigation-panel/icon.jsx"
+			],
+			"faName": "pen"
+		},
+		"pen-to-square": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-block-library/src/form-input-password/icon.jsx",
+				"plugins/prc-roper/src/roper-item/icon.jsx"
+			],
+			"faName": "pen-to-square"
+		},
+		"rectangle-ad": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-block-library/src/promo/icon.jsx"],
+			"faName": "rectangle-ad"
+		},
+		"recycle": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-block-library/src/promo-rotator/icon.js"],
+			"faName": "recycle"
+		},
+		"shield-halved": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-block-forms/src/form-captcha/icon.jsx"],
+			"faName": "shield-halved"
+		},
+		"signs-post": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-related-posts/src/related-posts-query/icon.jsx"
+			],
+			"faName": "signs-post"
+		},
+		"sliders": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-block-library/src/form-input-range/icon.jsx"
+			],
+			"faName": "sliders"
+		},
+		"square-check": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-block-library/src/form-input-checkbox/icon.jsx"
+			],
+			"faName": "square-check"
+		},
+		"sticker-mule": {
+			"source": "brands-sprite",
+			"reason": "approved or vendor brand mark",
+			"files": ["plugins/prc-collections/src/collection-kicker/icon.jsx"]
+		},
+		"stopwatch": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-interactive-features/blocks/src/time-use-controller/icon.jsx"
+			],
+			"faName": "stopwatch"
+		},
+		"table": {
+			"source": "wordpress-icons",
+			"reason": "exact @wordpress/icons export",
+			"files": [
+				"plugins/prc-block-tables/src/data-table-controller/icon.jsx",
+				"plugins/prc-block-tables/src/remote-pivot-table/icon.jsx",
+				"plugins/prc-quiz-builder/src/result-table/icon.js"
+			],
+			"wpExport": "table"
+		},
+		"tag": {
+			"source": "wordpress-icons",
+			"reason": "exact @wordpress/icons export",
+			"files": [
+				"plugins/prc-block-library/src/tokens-list/icon.jsx",
+				"plugins/prc-block-tables/src/data-table-key/icon.jsx"
+			],
+			"wpExport": "tag"
+		},
+		"tags": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-block-library/src/tokens-list/icon.jsx"],
+			"faName": "tags"
+		},
+		"temperature-three-quarters": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-quiz-builder/src/question/icon.js"],
+			"faName": "temperature-three-quarters"
+		},
+		"timeline": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-block-library/src/timeline-slide/icon.jsx",
+				"plugins/prc-block-library/src/timeline/icon.jsx"
+			],
+			"faName": "timeline"
+		},
+		"trash-can": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-block-library/src/navigation-panel/icon.jsx",
+				"plugins/prc-block-library/src/navigation-panels/icon.jsx"
+			],
+			"faName": "trash-can"
+		},
+		"user-check": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-user-accounts/src/user-state/icon.jsx"],
+			"faName": "user-check"
+		},
+		"user-gear": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-staff-bylines/src/staff-query/icon.tsx"],
+			"faName": "user-gear"
+		},
+		"user-graduate": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-user-accounts/src/user-quiz-groups/icon.jsx"
+			],
+			"faName": "user-graduate"
+		},
+		"user-lock": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-user-accounts/src/controller/icon.jsx"],
+			"faName": "user-lock"
+		},
+		"users-gear": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-staff-bylines/src/bylines-query/icon.tsx"],
+			"faName": "users-gear"
+		},
+		"users-line": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": ["plugins/prc-staff-bylines/src/bylines-display/icon.tsx"],
+			"faName": "users-line"
+		},
+		"users-viewfinder": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-quiz-builder/src/group-results/icon.js",
+				"plugins/prc-quiz-builder/src/results/icon.js"
+			],
+			"faName": "users-viewfinder"
+		},
+		"window-restore": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-block-library/src/dialog-element/icon.jsx",
+				"plugins/prc-block-library/src/dialog-trigger/icon.jsx",
+				"plugins/prc-block-library/src/dialog/icon.jsx"
+			],
+			"faName": "window-restore"
+		},
+		"yin-yang": {
+			"source": "fa-free-solid",
+			"reason": "curated FA Free bake",
+			"files": [
+				"plugins/prc-religious-landscape-study/src/context-provider/icon.jsx",
+				"plugins/prc-religious-landscape-study/src/religious-tree-provider/icon.jsx",
+				"plugins/prc-religious-landscape-study/src/religious-tree/icon.jsx"
+			],
+			"faName": "yin-yang"
+		}
+	},
+	"filesWithoutGlyphAttr": [
+		{
+			"file": "plugins/enable-responsive-image/src/icon.tsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
+		},
+		{
+			"file": "plugins/prc-block-area-modules/src/block-area-context-provider/icon.jsx",
+			"source": "wordpress-icons",
+			"reason": "already imports @wordpress/icons"
+		},
+		{
+			"file": "plugins/prc-block-area-modules/src/block-area/icon.jsx",
+			"source": "wordpress-icons",
+			"reason": "already imports @wordpress/icons"
+		},
+		{
+			"file": "plugins/prc-block-forms/src/form-page/icon.jsx",
+			"source": "wordpress-icons",
+			"reason": "already imports @wordpress/icons"
+		},
+		{
+			"file": "plugins/prc-block-forms/src/synced-form/icon.jsx",
+			"source": "other",
+			"reason": "no icon= attribute"
+		},
+		{
+			"file": "plugins/prc-block-library/deprecated/src/accordion-controller/icon.jsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
+		},
+		{
+			"file": "plugins/prc-block-library/deprecated/src/accordion/icon.jsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
+		},
+		{
+			"file": "plugins/prc-block-library/deprecated/src/tab/icon.jsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
+		},
+		{
+			"file": "plugins/prc-block-library/deprecated/src/tabs/icon.jsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
+		},
+		{
+			"file": "plugins/prc-block-library/src/code-syntax/icon.jsx",
+			"source": "wordpress-icons",
+			"reason": "already imports @wordpress/icons"
+		},
+		{
+			"file": "plugins/prc-block-library/src/dark-mode-toggle/icon.jsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
+		},
+		{
+			"file": "plugins/prc-block-library/src/form-input-select/icon.jsx",
+			"source": "wordpress-icons",
+			"reason": "already imports @wordpress/icons"
+		},
+		{
+			"file": "plugins/prc-block-library/src/logo/icon.jsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
+		},
+		{
+			"file": "plugins/prc-block-library/src/responsive-container-controller/icon.jsx",
+			"source": "wordpress-icons",
+			"reason": "already imports @wordpress/icons"
+		},
+		{
+			"file": "plugins/prc-block-library/src/responsive-container-view/icon.jsx",
+			"source": "wordpress-icons",
+			"reason": "already imports @wordpress/icons"
+		},
+		{
+			"file": "plugins/prc-block-library/src/show-more/icon.jsx",
+			"source": "wordpress-icons",
+			"reason": "already imports @wordpress/icons"
+		},
+		{
+			"file": "plugins/prc-block-library/src/social-share-sheet/icon.jsx",
+			"source": "wordpress-icons",
+			"reason": "already imports @wordpress/icons"
+		},
+		{
+			"file": "plugins/prc-block-library/src/social-share-text-link/icon.jsx",
+			"source": "wordpress-icons",
+			"reason": "already imports @wordpress/icons"
+		},
+		{
+			"file": "plugins/prc-block-library/src/table-of-contents/icon.jsx",
+			"source": "wordpress-icons",
+			"reason": "already imports @wordpress/icons"
+		},
+		{
+			"file": "plugins/prc-block-tables/src/data-table-filter/icon.jsx",
+			"source": "wordpress-icons",
+			"reason": "already imports @wordpress/icons"
+		},
+		{
+			"file": "plugins/prc-block-tables/src/data-table-render/icon.jsx",
+			"source": "wordpress-icons",
+			"reason": "already imports @wordpress/icons"
+		},
+		{
+			"file": "plugins/prc-chart-builder/src/synced-chart/icon.jsx",
+			"source": "other",
+			"reason": "no icon= attribute"
+		},
+		{
+			"file": "plugins/prc-collections/src/fact-sheet-collection/icon.jsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
+		},
+		{
+			"file": "plugins/prc-embeds/src/icon.jsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
+		},
+		{
+			"file": "plugins/prc-interactive-features/blocks/src/scrolly-controller/icon.js",
+			"source": "other",
+			"reason": "no icon= attribute"
+		},
+		{
+			"file": "plugins/prc-interactive-features/blocks/src/scrolly-scenes/icon.js",
+			"source": "other",
+			"reason": "no icon= attribute"
+		},
+		{
+			"file": "plugins/prc-quiz-builder/src/controller/icon.js",
+			"source": "wordpress-icons",
+			"reason": "already imports @wordpress/icons"
+		},
+		{
+			"file": "plugins/prc-quiz-builder/src/synced-quiz/icon.jsx",
+			"source": "other",
+			"reason": "no icon= attribute"
+		},
+		{
+			"file": "plugins/prc-quiz-political-typology-2026/src/chart-explorer/icon.jsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
+		},
+		{
+			"file": "plugins/prc-quiz-political-typology-2026/src/community-group-dynamic-chart/icon.jsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
+		},
+		{
+			"file": "plugins/prc-quiz-political-typology-2026/src/group-results/icon.jsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
+		},
+		{
+			"file": "plugins/prc-quiz-political-typology-2026/src/results-explorer/icon.jsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
+		},
+		{
+			"file": "plugins/prc-quiz-political-typology-2026/src/results/icon.jsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
+		},
+		{
+			"file": "plugins/prc-quiz-religious-typology/src/icon.jsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
+		},
+		{
+			"file": "plugins/prc-religious-landscape-study/src/available-tabs/icon.jsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
+		},
+		{
+			"file": "plugins/prc-religious-projections/src/chart-provider/icon.jsx",
+			"source": "wordpress-icons",
+			"reason": "already imports @wordpress/icons"
+		},
+		{
+			"file": "plugins/prc-religious-projections/src/context-provider/icon.jsx",
+			"source": "wordpress-icons",
+			"reason": "already imports @wordpress/icons"
+		},
+		{
+			"file": "plugins/prc-religious-projections/src/timeline-scrubber/icon.jsx",
+			"source": "wordpress-icons",
+			"reason": "already imports @wordpress/icons"
+		},
+		{
+			"file": "plugins/prc-report-package/src/report-materials/icon.jsx",
+			"source": "wordpress-icons",
+			"reason": "already imports @wordpress/icons"
+		}
+	]
+}

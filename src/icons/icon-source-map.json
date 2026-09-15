@@ -1,0 +1,688 @@
+{
+	"$comment": "Curated PRC fill names. source: fa-free-solid | fa-free-regular | custom. prc/{name} is FA Free solid; prc/{name}-outline is FA Free Regular when that glyph exists. Custom {name}-outline companions are allowed when Free Regular lacks the solid. Optional faName overrides the FortAwesome lookup. Regenerated SVGs via npm run build:fill-svgs -w @prc/icon-library.",
+	"icons": [
+		{
+			"name": "arrow-right",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "angle-up",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "angle-right",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "clipboard-list",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "person-walking-arrow-loop-left",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "people-group",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "person-praying",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "person-booth",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "hands-praying",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "user-plus",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "backward",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "forward",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "bookmark",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "bookmark-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "caret-up",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "caret-down",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "caret-right",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "caret-left",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "check",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "chevron-up",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "chevron-down",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "chevron-left",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "chevron-right",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "circle-chevron-up",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "circle-chevron-down",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "circle-chevron-left",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "circle-chevron-right",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "circle",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "circle-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "circle-plus",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "circle-plus-outline",
+			"source": "custom"
+		},
+		{
+			"name": "circle-minus",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "circle-minus-outline",
+			"source": "custom"
+		},
+		{
+			"name": "circle-xmark",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "circle-xmark-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "code",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "headphones",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "house",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "list",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "magnifying-glass",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "minus",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "plus",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "moon",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "moon-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "sun",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "sun-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "play",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "pause",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "print",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "share",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "share-nodes",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "xmark",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "chart-column",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "table",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "compare",
+			"source": "custom"
+		},
+		{
+			"name": "arrow-right-long",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "circle-check",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "circle-check-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "circle-x",
+			"source": "fa-free-solid",
+			"faName": "circle-xmark"
+		},
+		{
+			"name": "circle-x-outline",
+			"source": "fa-free-regular",
+			"faName": "circle-xmark"
+		},
+		{
+			"name": "graduation-cap",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "arrows-rotate",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "arrow-rotate-left",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "arrow-rotate-right",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "up-right-and-down-left-from-center",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "search",
+			"source": "fa-free-solid",
+			"faName": "magnifying-glass"
+		},
+		{
+			"name": "star",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "star-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "download",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "file",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "file-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "video",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "clipboard",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "clipboard-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "link",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "presentation-screen",
+			"source": "custom"
+		},
+		{
+			"name": "file-pdf",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "file-pdf-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "upload",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "arrow-down-up-across-line",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "arrow-up-a-z",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "arrow-up-right-from-square",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "bars-progress",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "bars",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "bullhorn",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "calendar-week",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "circle-play",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "circle-play-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "circle-question",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "circle-question-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "cookie-bite",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "database",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "diamond-turn-right",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "earth-americas",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "file-arrow-down",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "file-lines",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "file-lines-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "filter",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "fingerprint",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "fire",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "hat-wizard",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "icons",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "layer-group",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "lock",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "map",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "map-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "newspaper",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "newspaper-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "palette",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "passport",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "pen-to-square",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "pen-to-square-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "rectangle-ad",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "recycle",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "signs-post",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "square-check",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "square-check-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "tag",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "tags",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "temperature-three-quarters",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "timeline",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "trash-can",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "trash-can-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "user-check",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "user-gear",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "user-graduate",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "user-lock",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "users-gear",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "users-line",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "users-viewfinder",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "window-restore",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "window-restore-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "yin-yang",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "arrow-down-short-wide",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "arrow-up-short-wide",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "bars-staggered",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "chart-pie",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "chart-simple",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "circle-dot",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "circle-dot-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "clock",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "clock-rotate-left",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "clock-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "clone",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "clone-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "comment",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "comment-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "credit-card",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "credit-card-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "i-cursor",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "image",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "image-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "pen",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "shield-halved",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "sliders",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "stopwatch",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "bell",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "bell-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "bell-slash",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "bell-slash-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "envelope",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "envelope-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "envelope-open",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "envelope-open-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "envelope-open-text",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "envelope-circle-check",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "inbox",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "paper-plane",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "paper-plane-outline",
+			"source": "fa-free-regular"
+		},
+		{
+			"name": "card",
+			"source": "custom"
+		}
+	]
+}

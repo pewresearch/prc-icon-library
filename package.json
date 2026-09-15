@@ -2,26 +2,24 @@
 	"name": "@prc/icon-library",
 	"description": "Fontawesome based icon library for PRC Design System",
 	"license": "GPL-2.0-or-later",
+	"dependencies": {
+		"@fortawesome/free-brands-svg-icons": "^6.7.2",
+		"@fortawesome/free-regular-svg-icons": "^6.7.2",
+		"@fortawesome/free-solid-svg-icons": "^6.7.2"
+	},
 	"devDependencies": {
 		"@wordpress/scripts": "^31.4.0",
 		"babel-plugin-macros": "^3.1.0"
 	},
 	"scripts": {
-		"build:sprites": "bash ./bin/build.sh"
+		"build:fill-svgs": "node ./bin/build-fill-svgs.mjs",
+		"generate:icon-manifest": "node ./bin/generate-icon-manifest.mjs",
+		"build:icon-compare-sheet": "node ./bin/build-compare-sheet.mjs",
+		"icons:map-chrome": "node ./bin/map-chrome-icons.mjs",
+		"icons:check": "node ./bin/build-fill-svgs.mjs --check && node ./bin/generate-icon-manifest.mjs --check && node ./bin/map-chrome-icons.mjs --check && node ./bin/scan-icon-call-sites.mjs --check && node ./bin/check-fa-pro-gone.mjs",
+		"icons:audit-repo": "node ./bin/scan-repo-icon-refs.mjs",
+		"icons:scan-call-sites": "node ./bin/scan-icon-call-sites.mjs",
+		"test": "node --test ../../tests/prc-icon-library/unit/*.test.mjs"
 	},
-	"optionalDependencies": {
-		"@awesome.me/kit-329ff3ff3e": "^1.0.79",
-		"@fortawesome/react-fontawesome": "^0.2.2",
-		"@fortawesome/fontawesome-pro": "^6.7.2",
-		"@fortawesome/fontawesome-svg-core": "^6.7.2",
-		"@fortawesome/free-brands-svg-icons": "^6.7.2",
-		"@fortawesome/pro-light-svg-icons": "^6.7.2",
-		"@fortawesome/pro-regular-svg-icons": "^6.7.2",
-		"@fortawesome/pro-solid-svg-icons": "^6.7.2",
-		"@fortawesome/pro-thin-svg-icons": "^6.7.2",
-		"@fortawesome/sharp-light-svg-icons": "^6.7.2",
-		"@fortawesome/sharp-regular-svg-icons": "^6.7.2",
-		"@fortawesome/sharp-solid-svg-icons": "^6.7.2"
-	},
-	"version": "1.0.0"
+	"version": "1.1.0"
 }

@@ -1,0 +1,17 @@
+{
+	"$comment": "Allowlisted leftover call sites. keepSprite is empty: every former Pro chrome name remaps onto a curated FA Free fill or @wordpress/icons. phpcsDebt is empty: first-party PHP passes prc/brands.",
+	"keepSprite": [],
+	"phpcsDebt": [],
+	"dashiconStrings": [
+		{
+			"file": "plugins/prc-interactive-features/blocks/src/scrolly-dynamic-bars/index.js",
+			"icon": "chart-bar",
+			"reason": "registerBlockType dashicon string, not @prc/icons"
+		}
+	],
+	"notes": [
+		"Dynamic $library / {library} renderers (prc-block/icon, icon-span, social-share-sheet, core/button) stay generic so saved brands still render through the fail-closed facade.",
+		"navigation-panels navigationStyle is play or angle-right; both are curated PRC fills.",
+		"plugins/prc-interactive-features/blocks/src/scrolly-dynamic-bars/index.js uses a WordPress dashicon string, not @prc/icons."
+	]
+}
