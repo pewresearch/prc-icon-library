@@ -33,6 +33,10 @@ return array(
 		'label'     => 'Angle Right',
 		'file_path' => 'src/icons/prc/angle-right.svg',
 	),
+	'angle-left' => array(
+		'label'     => 'Angle Left',
+		'file_path' => 'src/icons/prc/angle-left.svg',
+	),
 	'clipboard-list' => array(
 		'label'     => 'Clipboard List',
 		'file_path' => 'src/icons/prc/clipboard-list.svg',
@@ -396,6 +400,30 @@ return array(
 	'earth-americas' => array(
 		'label'     => 'Earth Americas',
 		'file_path' => 'src/icons/prc/earth-americas.svg',
+	),
+	'earth-europe' => array(
+		'label'     => 'Earth Europe',
+		'file_path' => 'src/icons/prc/earth-europe.svg',
+	),
+	'earth-oceania' => array(
+		'label'     => 'Earth Oceania',
+		'file_path' => 'src/icons/prc/earth-oceania.svg',
+	),
+	'earth-asia' => array(
+		'label'     => 'Earth Asia',
+		'file_path' => 'src/icons/prc/earth-asia.svg',
+	),
+	'earth-africa' => array(
+		'label'     => 'Earth Africa',
+		'file_path' => 'src/icons/prc/earth-africa.svg',
+	),
+	'globe' => array(
+		'label'     => 'Globe',
+		'file_path' => 'src/icons/prc/globe.svg',
+	),
+	'book-atlas' => array(
+		'label'     => 'Book Atlas',
+		'file_path' => 'src/icons/prc/book-atlas.svg',
 	),
 	'file-arrow-down' => array(
 		'label'     => 'File Arrow Down',

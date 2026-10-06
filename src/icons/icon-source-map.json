@@ -14,6 +14,10 @@
 			"source": "fa-free-solid"
 		},
 		{
+			"name": "angle-left",
+			"source": "fa-free-solid"
+		},
+		{
 			"name": "clipboard-list",
 			"source": "fa-free-solid"
 		},
@@ -378,6 +382,30 @@
 		},
 		{
 			"name": "earth-americas",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "earth-europe",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "earth-oceania",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "earth-asia",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "earth-africa",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "globe",
+			"source": "fa-free-solid"
+		},
+		{
+			"name": "book-atlas",
 			"source": "fa-free-solid"
 		},
 		{
