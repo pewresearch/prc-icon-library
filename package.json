@@ -21,5 +21,5 @@
 		"icons:scan-call-sites": "node ./bin/scan-icon-call-sites.mjs",
 		"test": "node --test ../../tests/prc-icon-library/unit/*.test.mjs"
 	},
-	"version": "1.3.0"
+	"version": "1.2.0"
 }
