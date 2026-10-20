@@ -25,6 +25,10 @@ return array(
 		'label'     => 'Apple',
 		'file_path' => 'src/icons/brands/apple.svg',
 	),
+	'apple-news' => array(
+		'label'     => 'Apple News',
+		'file_path' => 'src/icons/brands/apple-news.svg',
+	),
 	'bluesky' => array(
 		'label'     => 'Bluesky',
 		'file_path' => 'src/icons/brands/bluesky.svg',

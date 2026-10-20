@@ -54,7 +54,7 @@ Both constants are consumed by `\PRC\Platform\Icons\get_icon_as_url()` in `prc-s
 
 On public sites the plugin appends a `robots.txt` disallow for `/wp-content/plugins/prc-icon-library/` (both the catch-all `User-agent: *` group and the dedicated `User-agent: Googlebot` group).
 
-On `init` (priority 11) `Icon_Registry` registers collection `prc`. On `init` (priority 12) `Brand_Icon_Registry` registers collection `brands`. Curated names: `prc/{name}` is FA Free solid; `prc/{name}-outline` is FA Free Regular when that Regular glyph exists, or a custom fill when Free Regular lacks the solid (`circle-plus-outline`, `circle-minus-outline`). Approved brands: `brands/{name}` is FA Free Brands.
+On `init` (priority 11) `Icon_Registry` registers collection `prc`. On `init` (priority 12) `Brand_Icon_Registry` registers collection `brands`. Curated names: `prc/{name}` is FA Free solid; `prc/{name}-outline` is FA Free Regular when that Regular glyph exists, or a custom fill when Free Regular lacks the solid (`circle-plus-outline`, `circle-minus-outline`). Approved brands: `brands/{name}` is FA Free Brands, except marks FA Free lacks, which bake from `CUSTOM_BRAND_CATALOG` in `bin/fill-icon-catalog.mjs` (`apple-news`).
 
 | Hook                                         | Type   | Purpose                                                                                                        |
 | -------------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------- |
@@ -132,15 +132,16 @@ Fill SVGs bake from public `@fortawesome/free-*-svg-icons` packages. No Font Awe
 
 ## Licensing
 
-| Asset                                                 | License                                                                                                                           |
-| ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Plugin PHP, `package.json`                            | GPL-2.0-or-later ([LICENSE](LICENSE))                                                                                             |
-| `build/icons/brands.svg`                              | Font Awesome Free Brands — [SIL OFL 1.1](https://scripts.sil.org/OFL) / [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
-| `src/icons/prc/*.svg` (FA Free solid bakes)           | Font Awesome Free 6 solid, scaled into 24×24 — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)                          |
-| `src/icons/prc/*-outline.svg` (FA Free Regular bakes) | Font Awesome Free 6 Regular, scaled into 24×24 — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)                        |
-| `src/icons/brands/*.svg` (FA Free Brands bakes)       | Font Awesome Free 6 Brands, scaled into 24×24 — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)                         |
+| Asset                                                 | License                                                                                                                                                                            |
+| ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Plugin PHP, `package.json`                            | GPL-2.0-or-later ([LICENSE](LICENSE))                                                                                                                                              |
+| `build/icons/brands.svg`                              | Font Awesome Free Brands — [SIL OFL 1.1](https://scripts.sil.org/OFL) / [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); `apple-news` symbol as below                    |
+| `src/icons/prc/*.svg` (FA Free solid bakes)           | Font Awesome Free 6 solid, scaled into 24×24 — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)                                                                           |
+| `src/icons/prc/*-outline.svg` (FA Free Regular bakes) | Font Awesome Free 6 Regular, scaled into 24×24 — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)                                                                         |
+| `src/icons/brands/*.svg` (FA Free Brands bakes)       | Font Awesome Free 6 Brands, scaled into 24×24 — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)                                                                          |
+| `src/icons/brands/apple-news.svg`                     | Apple News black app icon, Apple trademark. Used unchanged under the [Apple News Identity Guidelines](https://marketing.services.apple/apple-news-identity-guidelines) — not CC BY |
 
-Font Awesome is a trademark of Fonticons, Inc.
+Font Awesome is a trademark of Fonticons, Inc. Apple and Apple News are trademarks of Apple Inc.
 
 ## Notes
 

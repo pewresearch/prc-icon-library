@@ -7,7 +7,8 @@
  * masters listed in icon-source-map.json). `prc/{name}` is solid;
  * `prc/{name}-outline` is Free Regular when that glyph exists, or a custom
  * fill when Free Regular lacks the solid.
- * Approved brands bake from `@fortawesome/free-brands-svg-icons` into
+ * Approved brands bake from `@fortawesome/free-brands-svg-icons` (or
+ * CUSTOM_BRAND_CATALOG for marks FA Free lacks) into
  * `src/icons/brands/{name}.svg`.
  *
  * Usage:

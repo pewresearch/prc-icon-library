@@ -1,7 +1,7 @@
 {
 	"$comment": "Block-inserter chrome map. Re-run: npm run icons:map-chrome -w @prc/icon-library",
 	"summary": {
-		"files": 125,
+		"files": 131,
 		"uniqueGlyphs": 69,
 		"bySource": {
 			"fa-free-solid": 60,
@@ -669,9 +669,39 @@
 			"reason": "already imports @wordpress/icons"
 		},
 		{
+			"file": "plugins/prc-quiz-builder/src/mute-audio/icon.js",
+			"source": "other",
+			"reason": "no icon= attribute"
+		},
+		{
 			"file": "plugins/prc-quiz-builder/src/synced-quiz/icon.jsx",
 			"source": "other",
 			"reason": "no icon= attribute"
+		},
+		{
+			"file": "plugins/prc-quiz-civic-personality/src/chart-explorer/icon.jsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
+		},
+		{
+			"file": "plugins/prc-quiz-civic-personality/src/community-group-dynamic-chart/icon.jsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
+		},
+		{
+			"file": "plugins/prc-quiz-civic-personality/src/group-results/icon.jsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
+		},
+		{
+			"file": "plugins/prc-quiz-civic-personality/src/results/icon.jsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
+		},
+		{
+			"file": "plugins/prc-quiz-civic-personality/src/winning-icon/icon.jsx",
+			"source": "inline-svg",
+			"reason": "inline SVG chrome"
 		},
 		{
 			"file": "plugins/prc-quiz-political-typology-2026/src/chart-explorer/icon.jsx",
