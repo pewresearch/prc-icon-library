@@ -107,7 +107,7 @@ $url = \PRC\Platform\Icons\get_icon_as_url( 'prc', 'arrow-right' );
 // https://.../build/icons/prc.svg#arrow-right
 ```
 
-Icons are object-cached for 7 days (`prc_icons__rendered` / `prc_icons__svg` / `prc_icons__data_uri` groups). Cache keys include `PRC_PLATFORM_VERSION` and a `prc-no-badge` facade suffix.
+Icons are object-cached for 7 days (`prc_icons__rendered` / `prc_icons__svg` / `prc_icons__data_uri` groups). Cache keys include `PRC_ICON_LIBRARY_CONTENT_HASH` (a hash of every registered fill SVG, written to `includes/icon-library-hash.php` by `generate:icon-manifest`) and a `prc-no-badge` facade suffix. They do not include `PRC_PLATFORM_VERSION`, so platform deploys reuse warm icon caches. Superseded keys expire through the TTL; no flush is needed.
 
 ## Build
 

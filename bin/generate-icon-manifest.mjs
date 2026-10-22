@@ -2,6 +2,7 @@
 /**
  * src/icons/prc/*.svg → includes/icon-manifest.php + build/icons/prc.svg
  * src/icons/brands/*.svg → includes/brands-manifest.php + build/icons/brands.svg
+ * Both sets → includes/icon-library-hash.php (icon object-cache version)
  *
  * Do not hand-register icons. PHP reads these lists and registers every
  * curated name as `prc/{name}` and every baked approved brand as
@@ -24,6 +25,12 @@ import {
 	FILL_ICON_CATALOG,
 	resolveApprovedBrands,
 } from './fill-icon-catalog.mjs';
+import {
+	ICON_LIBRARY_HASH_REL,
+	buildIconLibraryHashPhp,
+	collectIconLibraryEntries,
+	computeIconLibraryHash,
+} from './icon-library-hash.mjs';
 import {
 	BRANDS_SVG_DIR_REL,
 	CUSTOM_ICON_NAMES,
@@ -54,6 +61,7 @@ const PRC_SPRITE_REL = 'build/icons/prc.svg';
 const PRC_SPRITE_PATH = path.join(PLUGIN_ROOT, PRC_SPRITE_REL);
 const BRANDS_SPRITE_REL = 'build/icons/brands.svg';
 const BRANDS_SPRITE_PATH = path.join(PLUGIN_ROOT, BRANDS_SPRITE_REL);
+const ICON_LIBRARY_HASH_PATH = path.join(PLUGIN_ROOT, ICON_LIBRARY_HASH_REL);
 
 function parseArgs(argv) {
 	return { check: argv.includes('--check') };
@@ -286,6 +294,9 @@ function main(argv = process.argv.slice(2)) {
 	const curatedJson = buildCuratedPickerJson();
 	const sprite = buildPrcSprite();
 	const brandsSprite = buildBrandsSprite();
+	const hashPhp = buildIconLibraryHashPhp(
+		computeIconLibraryHash(collectIconLibraryEntries(PLUGIN_ROOT))
+	);
 	const command = 'npm run generate:icon-manifest -w @prc/icon-library';
 
 	if (check) {
@@ -315,8 +326,14 @@ function main(argv = process.argv.slice(2)) {
 			BRANDS_SPRITE_REL,
 			command
 		);
+		assertFileMatches(
+			ICON_LIBRARY_HASH_PATH,
+			hashPhp,
+			ICON_LIBRARY_HASH_REL,
+			command
+		);
 		process.stdout.write(
-			`OK ${MANIFEST_REL}, ${BRANDS_MANIFEST_REL}, curated picker JSON, ${PRC_SPRITE_REL}, and ${BRANDS_SPRITE_REL} match fill SVGs\n`
+			`OK ${MANIFEST_REL}, ${BRANDS_MANIFEST_REL}, curated picker JSON, ${PRC_SPRITE_REL}, ${BRANDS_SPRITE_REL}, and ${ICON_LIBRARY_HASH_REL} match fill SVGs\n`
 		);
 		return;
 	}
@@ -331,12 +348,14 @@ function main(argv = process.argv.slice(2)) {
 	fs.writeFileSync(PRC_SPRITE_PATH, sprite);
 	fs.mkdirSync(path.dirname(BRANDS_SPRITE_PATH), { recursive: true });
 	fs.writeFileSync(BRANDS_SPRITE_PATH, brandsSprite);
+	fs.writeFileSync(ICON_LIBRARY_HASH_PATH, hashPhp);
 	process.stdout.write(`Wrote ${MANIFEST_REL}\n`);
 	process.stdout.write(`Wrote ${BRANDS_MANIFEST_REL}\n`);
 	process.stdout.write(`Wrote ${SKIPPED_BRANDS_REL}\n`);
 	process.stdout.write(`Wrote ${CURATED_JSON_REL}\n`);
 	process.stdout.write(`Wrote ${PRC_SPRITE_REL}\n`);
 	process.stdout.write(`Wrote ${BRANDS_SPRITE_REL}\n`);
+	process.stdout.write(`Wrote ${ICON_LIBRARY_HASH_REL}\n`);
 }
 
 try {

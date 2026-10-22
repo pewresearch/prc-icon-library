@@ -38,6 +38,12 @@ define( 'PRC_PLATFORM_ICONS_PATH', plugin_dir_path( __FILE__ ) . '/build/icons/'
 define( 'PRC_ICON_LIBRARY_DIR', plugin_dir_path( __FILE__ ) );
 define( 'PRC_ICON_LIBRARY_FILE', __FILE__ );
 
+/**
+ * Hash of the registered fill SVGs. prc-scripts keys the icon object caches
+ * on it instead of PRC_PLATFORM_VERSION.
+ */
+define( 'PRC_ICON_LIBRARY_CONTENT_HASH', (string) require PRC_ICON_LIBRARY_DIR . 'includes/icon-library-hash.php' );
+
 require_once PRC_ICON_LIBRARY_DIR . 'includes/class-icon-registry.php';
 \PRC\Platform\Icon_Library\Icon_Registry::init();
 
