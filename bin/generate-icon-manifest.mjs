@@ -55,7 +55,7 @@ const BRANDS_SVG_DIR = path.join(PLUGIN_ROOT, BRANDS_SVG_DIR_REL);
 const BRANDS_REL = 'includes/approved-brands.json';
 const BRANDS_PATH = path.join(PLUGIN_ROOT, BRANDS_REL);
 const CURATED_JSON_REL =
-	'../prc-scripts/includes/scripts/src/@prc/icons/src/curated-prc-icons.json';
+	'../prc-shared/includes/scripts/src/@prc/icons/src/curated-prc-icons.json';
 const CURATED_JSON_PATH = path.join(PLUGIN_ROOT, CURATED_JSON_REL);
 const PRC_SPRITE_REL = 'build/icons/prc.svg';
 const PRC_SPRITE_PATH = path.join(PLUGIN_ROOT, PRC_SPRITE_REL);

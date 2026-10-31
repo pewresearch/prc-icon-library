@@ -61,7 +61,7 @@ if (fs.existsSync(spritesDir)) {
 
 const resolver = path.join(
 	REPO_ROOT,
-	'plugins/prc-scripts/includes/scripts/src/@prc/icons/src/resolve-icon-source.js'
+	'plugins/prc-shared/includes/scripts/src/@prc/icons/src/resolve-icon-source.js'
 );
 const resolverSrc = fs.readFileSync(resolver, 'utf8');
 if (

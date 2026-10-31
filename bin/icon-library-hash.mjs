@@ -1,5 +1,5 @@
 /**
- * Content hash of the registered fill SVGs. prc-scripts keys the icon
+ * Content hash of the registered fill SVGs. prc-shared keys the icon
  * object caches on it, so caches cold-start only when an SVG is added,
  * removed, or changed, not on every platform version bump.
  */

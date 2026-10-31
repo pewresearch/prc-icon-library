@@ -42,7 +42,7 @@ const SKIP_DIR = new Set([
 ]);
 
 const SKIP_FILES = new Set([
-	'plugins/prc-scripts/includes/scripts/src/@prc/icons/src/icon.js',
+	'plugins/prc-shared/includes/scripts/src/@prc/icons/src/icon.js',
 ]);
 
 /**

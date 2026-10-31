@@ -8,7 +8,7 @@ On WordPress 7.1+, PHP registers collection `prc` (“PRC Icons”) and collecti
 
 ## What it does
 
-- Defines `PRC_PLATFORM_ICONS_URL` and `PRC_PLATFORM_ICONS_PATH` so `prc-scripts` icon helpers can resolve fill-sprite URLs
+- Defines `PRC_PLATFORM_ICONS_URL` and `PRC_PLATFORM_ICONS_PATH` so `prc-shared` icon helpers can resolve fill-sprite URLs
 - Ships 24×24 fill SVGs and, on WordPress 7.1+, registers collection `prc` and collection `brands` through `wp_register_icon()`
 - Bakes fills from Font Awesome **Free** solid, Regular, and Brands packages (`npm run build:fill-svgs`)
 
@@ -41,7 +41,7 @@ On WordPress 7.1+, PHP registers collection `prc` (“PRC Icons”) and collecti
 | `PRC_PLATFORM_ICONS_URL`  | `{plugin_dir_url}/build/icons/` (trailing slash)  |
 | `PRC_PLATFORM_ICONS_PATH` | `{plugin_dir_path}/build/icons/` (trailing slash) |
 
-Both constants are consumed by `\PRC\Platform\Icons\get_icon_as_url()` in `prc-scripts`. Missing names return an HTML comment.
+Both constants are consumed by `\PRC\Platform\Icons\get_icon_as_url()` in `prc-shared`. Missing names return an HTML comment.
 
 ## Fill sprites
 
@@ -77,7 +77,7 @@ See [docs/plugins/prc-icon-library/icon-audit.md](../../docs/plugins/prc-icon-li
 
 ## Usage
 
-Icon rendering is handled by functions in the `PRC\Platform\Icons` namespace (defined in `prc-scripts/includes/utils.php`).
+Icon rendering is handled by functions in the `PRC\Platform\Icons` namespace (defined in `prc-shared/includes/utils.php`).
 
 **Render an icon as inline HTML (cached, `<i>` wrapper):**
 
@@ -114,7 +114,7 @@ Icons are object-cached for 7 days (`prc_icons__rendered` / `prc_icons__svg` / `
 ```bash
 npm run build:fill-svgs -w @prc/icon-library
 npm run generate:icon-manifest -w @prc/icon-library
-node plugins/prc-scripts/includes/scripts/src/@prc/icons/bin/build-index.js
+node plugins/prc-shared/includes/scripts/src/@prc/icons/bin/build-index.js
 npx turbo build --filter=@prc/icons
 npm run icons:check -w @prc/icon-library
 ```
@@ -125,7 +125,7 @@ Fill SVGs bake from public `@fortawesome/free-*-svg-icons` packages. No Font Awe
 
 | Dependency                            | Type             | Notes                                                      |
 | ------------------------------------- | ---------------- | ---------------------------------------------------------- |
-| `prc-scripts`                         | WordPress plugin | Required; provides `\PRC\Platform\Icons\*` render helpers  |
+| `prc-shared`                         | WordPress plugin | Required; provides `\PRC\Platform\Icons\*` render helpers  |
 | `@fortawesome/free-solid-svg-icons`   | npm (public)     | Source for curated `prc/{name}` solid fill bakes           |
 | `@fortawesome/free-regular-svg-icons` | npm (public)     | Source for curated `prc/{name}-outline` Regular fill bakes |
 | `@fortawesome/free-brands-svg-icons`  | npm (public)     | Source for approved `brands/{name}` fill bakes             |

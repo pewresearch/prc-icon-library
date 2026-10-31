@@ -19,7 +19,7 @@
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       prc-icon-library
- * Requires Plugins:  prc-scripts
+ * Requires Plugins:  prc-shared
  */
 
 declare(strict_types=1);
@@ -39,7 +39,7 @@ define( 'PRC_ICON_LIBRARY_DIR', plugin_dir_path( __FILE__ ) );
 define( 'PRC_ICON_LIBRARY_FILE', __FILE__ );
 
 /**
- * Hash of the registered fill SVGs. prc-scripts keys the icon object caches
+ * Hash of the registered fill SVGs. prc-shared keys the icon object caches
  * on it instead of PRC_PLATFORM_VERSION.
  */
 define( 'PRC_ICON_LIBRARY_CONTENT_HASH', (string) require PRC_ICON_LIBRARY_DIR . 'includes/icon-library-hash.php' );

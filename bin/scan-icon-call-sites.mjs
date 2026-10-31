@@ -20,12 +20,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import curatedPrcIcons from '../../prc-scripts/includes/scripts/src/@prc/icons/src/curated-prc-icons.json' with { type: 'json' };
+import curatedPrcIcons from '../../prc-shared/includes/scripts/src/@prc/icons/src/curated-prc-icons.json' with { type: 'json' };
 import {
 	PRC_LIBRARY,
 	BRANDS_LIBRARY,
 	resolveIconName,
-} from '../../prc-scripts/includes/scripts/src/@prc/icons/src/resolve-icon-source.js';
+} from '../../prc-shared/includes/scripts/src/@prc/icons/src/resolve-icon-source.js';
 import remapDoc from '../src/icons/call-site-remap.json' with { type: 'json' };
 import exceptionsDoc from '../src/icons/call-site-exceptions.json' with { type: 'json' };
 
@@ -54,9 +54,9 @@ const SKIP_DIR = new Set([
 ]);
 
 const SKIP_FILES = new Set([
-	'plugins/prc-scripts/includes/scripts/src/@prc/icons/src/icon.js',
-	'plugins/prc-scripts/includes/scripts/src/@prc/icons/src/resolve-icon-source.js',
-	'plugins/prc-scripts/includes/scripts/src/@prc/icons/src/icon-library-index.json',
+	'plugins/prc-shared/includes/scripts/src/@prc/icons/src/icon.js',
+	'plugins/prc-shared/includes/scripts/src/@prc/icons/src/resolve-icon-source.js',
+	'plugins/prc-shared/includes/scripts/src/@prc/icons/src/icon-library-index.json',
 	'plugins/prc-icon-library/bin/scan-icon-call-sites.mjs',
 	'plugins/prc-icon-library/bin/scan-repo-icon-refs.mjs',
 	'plugins/prc-icon-library/bin/map-chrome-icons.mjs',
