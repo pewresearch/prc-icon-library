@@ -15,4 +15,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-return 'f135d2646277b1f8';
+return '6f21f78ede90884b';

@@ -65,6 +65,10 @@ return array(
 		'label'     => 'Microsoft',
 		'file_path' => 'src/icons/brands/microsoft.svg',
 	),
+	'orcid' => array(
+		'label'     => 'Orcid',
+		'file_path' => 'src/icons/brands/orcid.svg',
+	),
 	'slack' => array(
 		'label'     => 'Slack',
 		'file_path' => 'src/icons/brands/slack.svg',
